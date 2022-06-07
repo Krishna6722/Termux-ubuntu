@@ -1,0 +1,67 @@
+________________________________________________________________________________________
+
+|                                                                                        |
+
+|         Install Ubuntu
+
+|
+
+|         Run The Following command For sound problem:-
+
+|________________________________________________________________________________________
+
+|
+
+|         nano $PREFIX/etc/pulse/default.pa
+
+|
+
+|         Add the following line in the last on the file.
+
+|
+
+|         load-module module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1
+
+|
+
+|________________________________________________________________________________________
+
+|
+
+|         we have to edit daemon file.
+
+|
+
+|         nano $PREFIX/etc/pulse/daemon.conf
+
+|
+
+|         change  exit-idle-time = 20 to  -1
+
+|
+
+|________________________________________________________________________________________
+
+|
+
+|         enter this command in termux terminal
+
+|
+
+|         pulseaudio --start
+
+|
+
+|________________________________________________________________________________________
+
+|
+
+|         copy this command and paste in ubuntu terminal
+
+|
+
+|         echo "export PULSE_SERVER 127.0.0.1" >> $PREFIX/bin/vncserver
+
+|
+
+|________________________________________________________________________________________|
